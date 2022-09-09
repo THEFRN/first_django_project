@@ -24,3 +24,4 @@ class DetailView(generic.DetailView):
 class CreatePost(generic.CreateView):
     form_class = PostForm
     template_name = 'blog/create_post.html'
+    # needs the get_absolute_url method :))))) for redirection

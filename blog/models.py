@@ -1,4 +1,5 @@
 from django.db import models
+from django.shortcuts import reverse
 from django.contrib.auth.models import User
 
 
@@ -13,3 +14,6 @@ class BlogPost(models.Model):
     date_time_created = models.DateTimeField(auto_now_add=True)
     date_time_modified = models.DateTimeField(auto_now=True)
     author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
+
+    def get_absolute_url(self):
+        return reverse('detail_view', args=[self.id])
