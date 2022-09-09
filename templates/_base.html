@@ -31,7 +31,8 @@
             {% if user.is_authenticated %}
                 Welcome {{ user.username }} | <a class="text-light" href="{% url 'logout' %}">Log Out</a>
             {% else %}
-                <a href="{% url 'login' %}">login</a> | <a class="text-light" href="{% url 'logout' %}">Log Out</a>
+                <a class="text-light" href="{% url 'login' %}">Login</a> |
+                <a class="text-light" href="{% url 'signup' %}">Sign Up</a>
         {% endif %} </div>
     </div>
 </nav>
