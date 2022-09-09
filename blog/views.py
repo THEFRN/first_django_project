@@ -23,4 +23,4 @@ class DetailView(generic.DetailView):
 
 class CreatePost(generic.CreateView):
     form_class = PostForm
-    template_name = None
+    template_name = 'blog/create_post.html'

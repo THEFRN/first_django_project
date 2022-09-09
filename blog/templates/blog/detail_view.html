@@ -1,17 +1,21 @@
 {% extends '_base.html' %}
 {% block title %}
-    Post {{ post.id }}
+    Post No{{ post.id }}
 {% endblock title %}
-
-{% block contetnt %}
+{% block content %}
     <div class="container mt-4">
         <div class="row">
             <div class="col-9">
 
                 <div class="card shadow my-3 p-5">
                     <h1>{{ post.title }}</h1>
-                    <p class="small text-muted mt-2">By: {{ post.author }}</p>
+                    <p class="small text-muted mt-2">By: {{ post.author}}</p>
                     <p class="mt-2">{{ post.text}}</p>
+                    <div>
+{#                        <a href="{% url 'post_update' post.id%}" class="btn btn-sm btn-warning">Edit</a>#}
+{#                        <a href="{% url 'delete_post' post.id%}" class="btn btn-sm btn-danger">Delete Post</a>#}
+
+                    </div>
                 </div>
 
                 <div class="card shadow my-3 p-5">
@@ -56,4 +60,4 @@
             </div>
         </div>
     </div>
-{% endblock contetnt %}
+{% endblock content %}
