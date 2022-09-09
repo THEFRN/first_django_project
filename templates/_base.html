@@ -27,7 +27,12 @@
 
             </div>
         </div>
-        <div class="mx-2 text-white">Welcome</div>
+        <div class="mx-2 text-white">
+            {% if user.is_authenticated %}
+                Welcome {{ user.username }} | <a class="text-light" href="{% url 'logout' %}">Log Out</a>
+            {% else %}
+                <a href="{% url 'login' %}">login</a> | <a href="{% url 'Sign up' %}">login</a>
+        {% endif %} </div>
     </div>
 </nav>
 
