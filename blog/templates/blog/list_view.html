@@ -16,7 +16,7 @@
                             <p class="card-text py-3">
                                 {{ post.text}}
                             </p>
-                            <div class="btn btn-sm btn-success">Read More</div>
+                            <a class="btn btn-sm btn-success" href="{% url 'detail_view' post.id %}">Read More</a>
                         </div>
                     </div>
                     </div>
