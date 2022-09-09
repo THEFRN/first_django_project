@@ -31,3 +31,11 @@ class PostDelete(generic.DeleteView):
     model = BlogPost
     template_name = 'blog/delete_view.html'
     success_url = reverse_lazy('list_view')
+
+
+class PostUpdate(generic.UpdateView):
+    model = BlogPost
+    template_name = 'blog/create_post.html'
+    form_class = PostForm
+
+
