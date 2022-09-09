@@ -15,6 +15,6 @@ class ListView(generic.ListView):
 
 class DetailView(generic.DetailView):
     model = BlogPost
-    template_name = None
+    template_name = 'blog/detail_view.html'
     context_object_name = 'post'
     # context_object_name is automatically named when we use Detail View
