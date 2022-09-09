@@ -8,24 +8,20 @@
     <div class="container mt-4">
         <div class="row">
             <div class="col-9">
-                <div class="card shadow-sm my-3">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <h6 class="card-subtitle mb-2 text-muted small py-2">2 Sep 2021</h6>
-                        <p class="card-text py-3">
-                            Some quick example text to build on the card title and make up the bulk of the card's
-                            content.
-                            Some quick example text to build on the card title and make up the bulk of the card's
-                            content.
-                            Some quick example text to build on the card title and make up the bulk of the card's
-                            content.
-                        </p>
-                        <div class="btn btn-sm btn-success">Read More</div>
+                {% for post in posts %}
+                    <div class="card shadow-sm my-3">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ post.title}}</h5>
+                            <h6 class="card-subtitle mb-2 text-muted small py-2">{{ post.date_time_created}}</h6>
+                            <p class="card-text py-3">
+                                {{ post.text}}
+                            </p>
+                            <div class="btn btn-sm btn-success">Read More</div>
+                        </div>
                     </div>
-                </div>
-            </div>
+                    </div>
+                {% endfor %}
             <div class="col-3">
-
                 <div class="card my-4">
                     <h5 class="card-header">About</h5>
                     <div class="card-body">
@@ -37,7 +33,6 @@
                         </a>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
