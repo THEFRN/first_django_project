@@ -12,8 +12,8 @@
                     <p class="small text-muted mt-2">By: {{ post.author}}</p>
                     <p class="mt-2">{{ post.text}}</p>
                     <div>
-{#                        <a href="{% url 'post_update' post.id%}" class="btn btn-sm btn-warning">Edit</a>#}
-{#                        <a href="{% url 'delete_post' post.id%}" class="btn btn-sm btn-danger">Delete Post</a>#}
+                        <a href="{% url 'update' post.id%}" class="btn btn-sm btn-warning">Edit</a>
+                        <a href="{% url 'delete' post.id%}" class="btn btn-sm btn-danger">Delete Post</a>
 
                     </div>
                 </div>

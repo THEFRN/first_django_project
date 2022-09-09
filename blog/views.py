@@ -2,7 +2,7 @@ from django.urls import reverse_lazy
 from django.views import generic
 
 from .models import BlogPost
-from  .forms import PostForm
+from .forms import PostForm
 
 
 class ListView(generic.ListView):
