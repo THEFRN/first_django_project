@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.urls import reverse_lazy
 from django.views import generic
 
 from .models import BlogPost
@@ -25,3 +25,9 @@ class CreatePost(generic.CreateView):
     form_class = PostForm
     template_name = 'blog/create_post.html'
     # needs the get_absolute_url method :))))) for redirection
+
+
+class PostDelete(generic.DeleteView):
+    model = BlogPost
+    template_name = 'blog/delete_view.html'
+    success_url = reverse_lazy('list_view')
