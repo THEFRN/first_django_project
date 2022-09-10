@@ -8,4 +8,4 @@
 + bootstrap
 + heroku CLI
 
-** requirements for this project has been written in the file requirements.txt **
+**requirements for this project has been written in the file requirements.txt**
